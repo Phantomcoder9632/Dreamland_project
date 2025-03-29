@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'screens/home_page.dart';
 import 'screens/property_listings.dart';
 import 'screens/lease_management.dart';
 import 'screens/payment_processing.dart';
-import 'screens/login_page.dart';
 
 void main() {
   runApp(DreamHomeApp());
@@ -19,7 +17,7 @@ class DreamHomeApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginPage(),
+      home: HomePage(),
     );
   }
 }
