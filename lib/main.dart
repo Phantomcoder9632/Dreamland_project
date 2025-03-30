@@ -32,15 +32,17 @@ class AuthGate extends StatelessWidget {
     return FutureBuilder<bool>(
       future: checkLoginStatus(),
       builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting)
+        if (snapshot.connectionState == ConnectionState.waiting){
           return const Scaffold(
             body: Center(child: CircularProgressIndicator()),
           );
-
-        if (snapshot.data == true)
+        }
+        if (snapshot.data == true){
           return HomeScreen();
-        else
+        }
+        else{
           return LoginScreen();
+        }
       },
     );
   }
